@@ -8,6 +8,7 @@ class AI_page_data(forms.Form):
 l=[]
 import requests
 from bs4 import BeautifulSoup
+import os
 # def search():
 #     """it uses the website https://store.paeezanstudio.com/ in order
 #      to gather data"""
@@ -195,7 +196,7 @@ def AI_page(request):
             soup = BeautifulSoup(resp.text, "html.parser")
             print(soup)
         llm = ChatOpenAI(
-                api_key="sk-YWmog4eYSSNBQbsIvD0l39vhE8eyFIjDOkkRJaSPYvkNBhGO",
+                api_key=os.getenv("OPENAI_API"),
                 base_url="https://api.gapgpt.app/v1",
                 model="gpt-4o-mini",
         )
