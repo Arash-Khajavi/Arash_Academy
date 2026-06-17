@@ -196,7 +196,7 @@ def AI_page(request):
             soup = BeautifulSoup(resp.text, "html.parser")
             print(soup)
         llm = ChatOpenAI(
-                api_key=os.getenv("OPENAI_KEY"),
+                api_key=os.getenv("OPENAI_API"),
                 base_url="https://api.gapgpt.app/v1",
                 model="gpt-4o-mini",
         )
