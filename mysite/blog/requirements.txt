@@ -1,0 +1,11 @@
+python-dotenv
+Flask
+gunicorn
+langchain
+langchain-core
+langchain-community
+langchain-openai
+pydantic
+langchain_anthropic
+bs4
+requests
