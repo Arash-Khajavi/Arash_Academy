@@ -117,9 +117,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # If you have a project-level static folder
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+
 
     # For deployment, you'd also set STATIC_ROOT, but it's not needed for runserver
     # STATIC_ROOT = BASE_DIR / "staticfiles"
