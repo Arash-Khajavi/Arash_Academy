@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>خانه</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<img class='Image1' src="https://pesarkhande.com/_next/image?url=https%3A%2F%2Fwebsite-api.pesarkhandeh.com%2Fuploads%2Fpesar_logo_ea0457cb90.png&w=1920&q=75">
+<body class="design">
+ <div>
+  <form action="/" method="POST">
+      <button class="login-button" id="login-button" name="login-button">Login</button>
+      <input class="Input" id="login" name="login">
+      <label for="login">login</label>
+
+  </form>
+  </div>
+  {{ l|safe }}
+
+
+</body>
+</html>

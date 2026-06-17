@@ -1,0 +1,155 @@
+{% load static %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="fa">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <link rel="stylesheet" href="{% static 'style1.css' %}">-->
+<!--    <title>Become a peer</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--   <h1 class="UAE" style="color:black">Find yourself an intelligent peer</h1>-->
+<!--   <form class="form" action="" method="POST" enctype="multipart/form-data"  style=" background-color: white;">-->
+<!--       {% csrf_token %}-->
+<!--       <img style='padding-left:50px;' src="{% static 'f8a511bd-8ecc-4ebf-a930-31e292631ea8.png' %}">-->
+<!--       <input style="width:400px; height:40px; border-radius:10px;" type="number" id="your_grade" name="your_grade" required>-->
+<!--       <label for="your_grade">Your most recently finished Grade</label>-->
+<!--       <input type="text" id="Subject" name="Subject" required>-->
+<!--       <label for="Subject">Subject of Expertise</label>-->
+<!--       <input type="file" id="Report_card_of_the_two_previous_academic_years" name="Report" required>-->
+<!--       <label for="Report_card_of_the_two_previous_academic_years"></label>-->
+<!--       <input type="file" id="Report_card_of_the_two_previous_academic_years2" name="Report" required>-->
+<!--       <label for="Report_card_of_the_two_previous_academic_years">The Report cards of the last two academic years</label>-->
+<!--       <input style='background-color: black;' type="submit" value="Submit">-->
+<!--       {{ vc|safe }}-->
+<!--   </form>-->
+<!--    </body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Become a Peer Guide | Arash Academy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'm.css' %}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        Arash Academy
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/FindAPeer">Find A Peer</a></li>
+        <li><a href="#">Scholarships</a></li>
+        <li><a href="#">Chatbot</a></li>
+    </ul>
+
+</nav>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Become a Peer Guide</h1>
+
+        <p>
+            Share your knowledge, support younger students,
+            and develop valuable leadership skills.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="requirements">
+
+    <h2>Who Can Apply?</h2>
+
+    <div class="requirement-grid">
+
+        <div class="requirement-card">
+            <h3>Academic Excellence</h3>
+            <p>
+                Consistently strong grades in your chosen subject.
+            </p>
+        </div>
+
+        <div class="requirement-card">
+            <h3>Communication Skills</h3>
+            <p>
+                Ability to explain concepts clearly and patiently.
+            </p>
+        </div>
+
+        <div class="requirement-card">
+            <h3>Commitment</h3>
+            <p>
+                Dedication to helping fellow students succeed.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="application-section">
+
+    <div class="application-card">
+
+        <h2>Peer Guide Application</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" name="name">
+            </div>
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" name="email">
+            </div>
+
+            <div class="input-group">
+                <label>Most Recently Completed Grade</label>
+                <input type="number" name="grade">
+            </div>
+
+            <div class="input-group">
+                <label>Subject Expertise</label>
+                <input type="text" name="subject">
+            </div>
+
+            <div class="input-group">
+                <label>Academic Transcript</label>
+                <input type="file" name="transcript">
+            </div>
+
+            <div class="input-group">
+                <label>Report Cards (Last Two Years)</label>
+                <input type="file" name="reportcards">
+            </div>
+
+            <button type="submit">
+                Submit Application
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Payment for foreign currencies</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>This is the page for foreign payments.-->
+<!--    There are two ways you could pay:</h1>-->
+<!--    <button><a href="https://www.paypal.com/fr/home">Paypal</a> </button>-->
+<!--    <h1>-->
+<!--        Or you could pay directly:-->
+<!--        <form action="" method="POST">-->
+<!--            <input id="Card_Number" name="Card_Number" type="number">-->
+<!--            <label for="Card_Number">Card Number</label>-->
+<!--             <input id="Country" name="Country" type="text">-->
+<!--            <label for="Country">Country</label>-->
+<!--        </form>-->
+<!--    </h1>-->
+<!--</body>-->
+<!--</html>-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Foreign Payments | Arash Academy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="{% static 'foreign_currencies.css' %}">
+
+</head>
+
+<body>
+
+<section class="payment-page">
+
+    <div class="header">
+
+        <h1>Foreign Payments</h1>
+
+        <p>
+            Support Arash Academy using one of the
+            payment methods below.
+        </p>
+
+    </div>
+
+    <div class="payment-grid">
+
+        <!-- PayPal -->
+
+        <div class="payment-card">
+
+            <h2>PayPal</h2>
+
+            <p>
+                Fast, secure, and accepted worldwide.
+            </p>
+
+            <a href="{{ paypal_link }}"
+               class="paypal-btn">
+                Continue with PayPal
+            </a>
+
+        </div>
+
+        <!-- Direct Payment -->
+
+        <div class="payment-card">
+
+            <h2>Card Payment</h2>
+
+
+            <form action='' method="POST">
+                {% csrf_token %}
+
+
+                <div class="input-group">
+
+                    <label>
+                        Card Number
+                    </label>
+
+                    <input
+                    type="text"
+                    name="card"
+                    id="Card_Number"
+                    placeholder="1234 5678 9012 3456">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Country
+                    </label>
+
+                    <input
+                    type="text"
+                    name="country"
+                    id="Country"
+                    placeholder="Netherlands">
+
+                </div>
+
+                <button type="submit">
+                    Continue
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

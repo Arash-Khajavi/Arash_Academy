@@ -1,0 +1,231 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#F8FAFC;
+    color:#0F172A;
+}
+
+/* NAVBAR */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:white;
+
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-size:1.6rem;
+    font-weight:700;
+    color:#2563EB;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#334155;
+}
+
+/* HERO */
+
+.hero{
+
+    background:
+    linear-gradient(
+    135deg,
+    #2563EB,
+    #06B6D4
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.hero-button{
+
+    display:inline-block;
+
+    background:white;
+
+    color:#2563EB;
+
+    text-decoration:none;
+
+    padding:15px 30px;
+
+    border-radius:12px;
+
+    font-weight:600;
+}
+
+/* IMPACT */
+
+.impact{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.impact h2{
+    margin-bottom:40px;
+}
+
+.impact-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+}
+
+.impact-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+.impact-card h3{
+    color:#2563EB;
+    font-size:2rem;
+}
+
+/* DONATION FORM */
+
+.donation-section{
+    padding:20px 20px 80px;
+}
+
+.donation-card{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.1);
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.input-group input,
+.input-group select{
+
+    width:100%;
+
+    padding:14px;
+
+    border:2px solid #E2E8F0;
+
+    border-radius:12px;
+}
+
+button{
+
+    width:100%;
+
+    border:none;
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+/* CRYPTO */
+
+.crypto-section{
+    padding:0 20px 80px;
+}
+
+.crypto-card{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    text-align:center;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.1);
+}
+
+.qr-code{
+    width:220px;
+    margin:25px auto;
+}
+
+.wallet-box{
+
+    background:#F1F5F9;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+    word-break:break-all;
+}

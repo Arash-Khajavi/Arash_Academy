@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+    <title>Scholarships</title>
+</head>
+<body>
+
+   <h1 class="UAE" style="color:black">Financial hardship MUST NOT STOP Education</h1>
+
+   <form class="form" action="" method="POST"  style=" background-color: white;">
+       {% csrf_token %}
+       <ol>
+        <li>The Founder's Scholarship</li>
+            <img style="padding-left:50px; height:200px;" src="{% static 'Rika.jpeg' %}">
+         <li>The King's Scholarship</li>
+            <img style="padding-left:50px; height:200px; border-radius:30px;" src="{% static 'IMG_2812.JPG' %}">
+    </ol>
+
+
+       {{ cx1|safe }}
+       {{ vo|safe }}
+
+
+   </form>
+   {{ bv|safe }}
+
+
+
+    </body>
+</html>

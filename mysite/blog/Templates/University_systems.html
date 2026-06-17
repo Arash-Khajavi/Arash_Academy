@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+    <title>چت روم</title>
+</head>
+<body>
+   <h1 class="UAE" style="color:black">Education matters the most</h1>
+
+   <form class="form" action="" method="POST"  style=" background-color: white;">
+       {% csrf_token %}
+       <img style="padding-left:50px;" src="{% static 'f8a511bd-8ecc-4ebf-a930-31e292631ea8.png' %}">
+       <input type="text" id="user" name="user" required>
+       <label for="user">user</label>
+       <input type="text" id="language" name="language" required>
+       <label for="language">language</label>
+       <input style='background-color: black;' type="submit" value="Submit">
+       {{ cx1|safe }}
+       {{ vo|safe }}
+
+
+   </form>
+   {{ bv|safe }}
+
+
+
+    </body>
+</html>

@@ -1,0 +1,171 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find A Peer | Arash Academy</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+</head>
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Arash Academy
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Scholarships</a></li>
+            <li><a href="#">Become a Peer</a></li>
+            <li><a href="#">Chatbot</a></li>
+            <li><a href="#">Donate</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- HERO -->
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Find Your Perfect Peer Guide</h1>
+
+            <p>
+                Connect with experienced students who have
+                already excelled in your subjects and are ready
+                to help you succeed.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SEARCH CARD -->
+
+    <section class="search-section">
+
+        <div class="search-card">
+
+            <h2>Peer Matching Form</h2>
+
+            <form method="POST">
+                {% csrf_token %}
+
+                <div class="input-group">
+                    <label>Your Grade</label>
+
+                    <input
+                        type="number"
+                        name="your_grade"
+                        placeholder="e.g. 9"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>Subject</label>
+
+                    <input
+                        type="text"
+                        name="Subject"
+                        placeholder="e.g. Mathematics"
+                        required
+                    >
+                </div>
+
+                <button type="submit">
+                    Find Peer Guide
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- RESULTS -->
+
+
+    <section class="results">
+
+        <h2>Recommended Peer Guides</h2>
+
+        <div class="mentor-grid">
+
+            <div class="mentor-card">
+
+                <div class="mentor-avatar">
+                    <img style='width:80px; border-radius:70px;' src="{% static 'download (2).png' %}">
+                </div>
+
+                <h3>Rastin Geranmaye</h3>
+
+                <p>Grade 10 Student</p>
+
+                <p>Mathematics • Physics</p>
+
+                <p>Academic Average: 96%</p>
+
+                <button>
+                    Request Mentor
+                </button>
+
+            </div>
+
+            <div class="mentor-card">
+
+                <div class="mentor-avatar">
+                    SR
+                </div>
+
+                <h3>Sarah Roberts</h3>
+
+                <p>Grade 12 Student</p>
+
+                <p>Chemistry • Biology</p>
+
+                <p>Academic Average: 95%</p>
+
+                <button>
+                    Request Mentor
+                </button>
+
+            </div>
+
+            <div class="mentor-card">
+
+                <div class="mentor-avatar">
+                    AJ
+                </div>
+
+                <h3>Alex Johnson</h3>
+
+                <p>Grade 11 Student</p>
+
+                <p>Maths • ICT</p>
+
+                <p>Academic Average: 94%</p>
+
+                <button>
+                    Request Mentor
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

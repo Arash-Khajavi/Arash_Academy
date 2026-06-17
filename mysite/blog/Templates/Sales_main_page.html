@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales_main_page</title>
+    <link rel="stylesheet" href="{% static 'Sales.css' %}">
+</head>
+<body>
+          <form action="" method="POST">
+                  {% csrf_token %}
+
+                  <input id="user" name="user">
+                  <label for="user">What are you looking for?</label>
+                  <input id="submit" value="Submit" type="submit">
+
+          </form>
+          {{ v|safe }}
+
+<!--           <script>-->
+<!--               function x () {-->
+<!--                            window.location.href = 'https://www.aparat.com/home';-->
+<!--               }-->
+<!--               var submit_button=document.getElementById("submit")-->
+<!--               submit_button.addEventListener("click", x )}-->
+
+
+
+
+
+
+
+<!--           </script>-->
+</body>
+</html>

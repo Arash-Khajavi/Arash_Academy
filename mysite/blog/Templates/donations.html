@@ -1,0 +1,191 @@
+{% load static %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Donations</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--   <h1>Donations</h1>-->
+<!--   <h2> Our scholarships are backed by personal fund and donations. So if you really enjoy our service-->
+<!--   , we would be grateful if you did us a small favor.</h2>-->
+
+
+<!--   <form action="" method="POST">-->
+<!--       {% csrf_token %}-->
+<!--       <input id="amount" name="amount" type="text" required>-->
+<!--       <label for="amount">Amount</label>-->
+<!--       <input id="currency" name="currency" type="text" required>-->
+<!--       <label for="currency">Currency</label>-->
+
+
+<!--&lt;!&ndash;       <select id="currency" name="currency" required>&ndash;&gt;-->
+<!--&lt;!&ndash;           <option id="USD">$</option>&ndash;&gt;-->
+<!--&lt;!&ndash;           <option id="IRR">ریال(ایران)</option>&ndash;&gt;-->
+<!--&lt;!&ndash;           <option id="GBP">£</option>&ndash;&gt;-->
+<!--&lt;!&ndash;       </select>&ndash;&gt;-->
+<!--       <input id="submit" value="Submit" type="submit">-->
+<!--       <h1>Or, You can pay using Ethereum: </h1>-->
+<!--       <code>-->
+<!--           0xaB9ed0218Ecf2B1A68aA824253621250c17Ad2b0-->
+<!--       </code>-->
+<!--       <img  src="{% static 'download4.png' %}">-->
+
+
+<!--       {{ j|safe }}-->
+
+<!--   </form>-->
+
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Donate | Arash Academy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'donations.css' %}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        Arash Academy
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/FindAPeer">Find A Peer</a></li>
+        <li><a href="/BecomeAPeer">Become a Peer</a></li>
+        <li><a href="#">Scholarships</a></li>
+    </ul>
+
+</nav>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Support Student Success</h1>
+
+        <p>
+            Your donations help fund scholarships,
+            peer mentoring programmes, and educational
+            opportunities for students worldwide.
+        </p>
+
+        <a href="#donation-form" class="hero-button">
+            Donate Now
+        </a>
+
+    </div>
+
+</section>
+
+<section class="impact">
+
+    <h2>Your Impact</h2>
+
+    <div class="impact-grid">
+
+        <div class="impact-card">
+            <h3>€5</h3>
+            <p>Helps maintain platform services.</p>
+        </div>
+
+        <div class="impact-card">
+            <h3>€20</h3>
+            <p>Supports a student for one month.</p>
+        </div>
+
+        <div class="impact-card">
+            <h3>€50</h3>
+            <p>Contributes to scholarship funding.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="donation-form" class="donation-section">
+
+    <div class="donation-card">
+
+        <h2>Make a Donation</h2>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <div class="input-group">
+
+                <input id="amount" name="amount" type="number" required>
+                <label for="amount">Amount</label>
+            </div>
+
+            <div class="input-group">
+                <label>Currency</label>
+                 <input id="currency" name="currency" type="text" required>
+                 <h1> The supported currencies are: Iranian Rial, US dollar, Great Britain's pound</h1>
+            </div>
+
+            <button type="submit">
+                Donate Securely
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<section class="crypto-section">
+
+    <div class="crypto-card">
+
+        <h2>Cryptocurrency Donations</h2>
+
+        <p>
+            You may also support Arash Academy using Ethereum.
+        </p>
+
+         <img  src="{% static 'download4.png' %}">
+
+        <div class="wallet-box">
+
+            <span>
+            0xa89e0218EcF2B16A8aA82425362125ec17ad2be
+            </span>
+
+        </div>
+
+        <button onclick="copyWallet()">
+            Copy Wallet Address
+        </button>
+
+    </div>
+
+</section>
+
+<script>
+
+function copyWallet(){
+
+navigator.clipboard.writeText(
+'0xa89e0218EcF2B16A8aA82425362125ec17ad2be'
+);
+
+alert('Wallet address copied.');
+
+}
+
+</script>
+
+</body>
+</html>
