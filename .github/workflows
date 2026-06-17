@@ -24,4 +24,4 @@ jobs:
       env:
         OPENAI_API: ${{ secrets.OPENAI_API }}
       run: |
-        python n.py
+        python views.py
