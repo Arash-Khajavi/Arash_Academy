@@ -19,7 +19,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run migrations
-        run: python manage.py migrate
+        run: python mysite/manage.py migrate
 
       - name: Run tests
-        run: python manage.py test
+        run: python mysite/manage.py test
