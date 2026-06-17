@@ -9,3 +9,5 @@ pydantic
 langchain_anthropic
 bs4
 requests
+django
+os
